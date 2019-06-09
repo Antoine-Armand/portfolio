@@ -1,0 +1,47 @@
+.container
+{
+    height: 100vh;
+    color: #E1E3EE;
+    background-color: #201747;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .introduction
+{
+    text-align: center;
+}
+
+.container .introduction h1
+{
+    font-size: 5em;
+}
+
+.container .introduction p
+{
+    font-size: 1.2em;
+}
+
+.container .projectContainer h2
+{
+    padding-left: 7px;
+}
+
+.container .projectContainer .projectList
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container .projectContainer .projectList .projects
+{
+    margin: 7px;
+    padding-left: 7px;
+    max-width: 450px;
+    height: 20vh;
+    background-color:#404466;
+    overflow: hidden;
+    align-self: flex-end;
+}
