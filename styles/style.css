@@ -1,8 +1,7 @@
 .container
 {
     height: 100vh;
-    color: #E1E3EE;
-    background-color: #201747;
+    background-color: #f7f1e3;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
@@ -38,10 +37,29 @@
 .container .projectContainer .projectList .projects
 {
     margin: 7px;
-    padding-left: 7px;
+    padding: 7px;
+    min-width: 400px;
     max-width: 450px;
     height: 20vh;
-    background-color:#404466;
+    background-color:#ff5252;
     overflow: hidden;
-    align-self: flex-end;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container .projectContainer .projectList .projects p
+{
+    padding-top: 250px;
+    transition: padding-top 0.5s ease;
+}
+
+.container .projectContainer .projectList .projects:hover p
+{
+    padding-top: 0px;
+}
+
+.container .projectContainer .projectList .projects:hover
+{
+    box-shadow: 10px 10px 10px grey;
+    transform: translateX(7px);
 }
