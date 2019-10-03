@@ -1,17 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Antoine Armand</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-
-</head>
-<body>
+<?php
+    require_once 'views/partials/header.php';
+?>
     <div class="container">
         <div class="introduction">
             <h1> Antoine Armand </h1>
@@ -51,5 +40,6 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+<?php
+    require_once 'views/partials/footer.php';
+?>
