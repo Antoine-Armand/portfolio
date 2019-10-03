@@ -30,65 +30,21 @@ body
 
 /** Main page **/
 
-.container
+.image-container
 {
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 65px;
+    width: 80.209%;
 }
 
-.container .introduction
+.image-contents
 {
-    text-align: center;
+    width: 100%;
+    height: 334px;
 }
 
-.container .introduction h1
+.images
 {
-    font-size: 5em;
-}
-
-.container .introduction p
-{
-    font-size: 1.2em;
-}
-
-.container .projectContainer h2
-{
-    padding-left: 7px;
-}
-
-.container .projectContainer .projectList
-{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.container .projectContainer .projectList .projects
-{
-    margin: 7px;
-    padding: 7px;
-    min-width: 400px;
-    max-width: 450px;
-    height: 20vh;
-    background-color:#ff5252;
-    overflow: hidden;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.container .projectContainer .projectList .projects p
-{
-    padding-top: 250px;
-    transition: padding-top 0.5s ease;
-}
-
-.container .projectContainer .projectList .projects:hover p
-{
-    padding-top: 0px;
-}
-
-.container .projectContainer .projectList .projects:hover
-{
-    box-shadow: 10px 10px 10px grey;
-    transform: translateX(7px);
+    width: 79.221%;
+    background-color: black;
 }
