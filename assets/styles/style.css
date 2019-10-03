@@ -1,10 +1,39 @@
-.container
+body 
 {
     height: 100vh;
     background-color: #f7f1e3;
+    font-family: 'Roboto', sans-serif;
+}
+
+/** Menu **/
+
+.menu-container 
+{
+    position: relative;
+    padding: 43px 26px;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.menu-contents
+{
+    font-size: 22px;
+    line-height: 33px;
+}
+
+
+/** Main page **/
+
+.container
+{
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
 }
 
 .container .introduction
