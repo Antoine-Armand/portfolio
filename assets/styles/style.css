@@ -41,10 +41,33 @@ body
 {
     width: 100%;
     height: 334px;
+    display: flex;
+}
+
+.image-contents.image-top
+{
+    flex-flow: row nowrap;
+}
+
+.image-contents.image-bottom
+{
+    flex-flow: row-reverse nowrap;
 }
 
 .images
 {
     width: 79.221%;
+    height: inherit;
     background-color: black;
+    object-fit: none;
+}
+
+.image-top .images 
+{
+    object-position: 50% 35%;
+}
+
+.image-bottom .images
+{
+    object-position: 50% 75%;
 }
