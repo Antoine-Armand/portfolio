@@ -2,7 +2,7 @@ body
 {
     height: 100vh;
     background-color: #f7f1e3;
-    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 /** Menu **/
@@ -30,6 +30,28 @@ body
 
 /** Main page **/
 
+.main-container
+{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-container .main-title
+{
+    position: absolute;
+    left: -884px;
+    top: -195px;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 800px;
+    line-height: 1066px;
+    color: rgba(184, 178, 173, 0.25);
+    transform: rotate(-22deg);
+    z-index: -1;
+}
+
 .image-container
 {
     margin: 0 auto;
@@ -44,12 +66,12 @@ body
     display: flex;
 }
 
-.image-contents.image-top
+.image-contents.image-content-top
 {
     flex-flow: row nowrap;
 }
 
-.image-contents.image-bottom
+.image-contents.image-content-bottom
 {
     flex-flow: row-reverse nowrap;
 }
@@ -60,14 +82,52 @@ body
     height: inherit;
     background-color: black;
     object-fit: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
-.image-top .images 
+.image-content-top .image-top
 {
     object-position: 50% 35%;
 }
 
-.image-bottom .images
+.image-content-bottom .image-bottom
 {
     object-position: 50% 75%;
+}
+
+.image-container:hover .image-content-top .image-top
+{
+    object-position: 0% 35%;
+}
+
+.image-container:hover .image-content-bottom .image-bottom
+{
+    object-position: 85% 75%;
+}
+
+.project-text
+{
+    position: absolute;
+    top: 386px;
+    left: 26px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-text .project-label
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #383635;
+}
+
+.project-text .project-title
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 66px;
+    color: #383635;
 }
