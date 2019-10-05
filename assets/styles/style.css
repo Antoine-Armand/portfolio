@@ -112,6 +112,7 @@ body
     top: 386px;
     left: 26px;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
 }
 
 .project-text .project-label
@@ -129,5 +130,47 @@ body
     font-weight: bold;
     font-size: 44px;
     line-height: 66px;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #383635;
+    transition: all 0.2s ease;
+}
+
+.image-container:hover .project-text .project-title
+{
     color: #383635;
+}
+
+/** Choice menu **/
+
+.choice-menu
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.choice-menu-objects
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 100px;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    color: #383635;
+    cursor: pointer;
+}
+
+.choice-menu-objects::after
+{
+    content: "";
+    display: inline-block;
+    width: 75px;
+    height: 1px;
+    background-color: #383635;
 }
