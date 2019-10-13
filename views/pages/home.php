@@ -14,7 +14,7 @@
     </div>
     <div class="choice-menu">
         <ul>
-            <li class="choice-menu-objects"> 1 </li>
+            <li class="choice-menu-objects selected"> 1 </li>
             <li class="choice-menu-objects"> 2 </li>
             <li class="choice-menu-objects"> 3 </li>
         </ul>

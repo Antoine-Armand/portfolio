@@ -2,7 +2,7 @@ body
 {
     height: 100vh;
     background-color: #f7f1e3;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /** Menu **/
@@ -12,6 +12,7 @@ body
     position: relative;
     padding: 43px 26px;
     font-family: 'Playfair Display', serif;
+    color: #383635;
 }
 
 .menu
@@ -27,13 +28,16 @@ body
     line-height: 33px;
 }
 
+.menu-contents:hover
+{
+    text-decoration: underline;
+    text-decoration-color: #383635;
+}
 
 /** Main page **/
 
 .main-container
 {
-    max-width: 1440px;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -151,19 +155,27 @@ body
     font-family: 'Poppins', sans-serif;
 }
 
+.choice-menu ul
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+}
+
 .choice-menu-objects
 {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 100px;
     font-size: 32px;
     line-height: 48px;
     text-align: center;
     color: #383635;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .choice-menu-objects::after
@@ -173,4 +185,17 @@ body
     width: 75px;
     height: 1px;
     background-color: #383635;
+}
+
+.choice-menu-objects:hover,
+.choice-menu-objects.selected
+{
+    width: 130px;
+    font-size: 44px;
+}
+
+.choice-menu-objects:hover::after,
+.choice-menu-objects.selected::after
+{
+    width: 100px;
 }
