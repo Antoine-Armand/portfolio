@@ -82,7 +82,7 @@ body
 
 .images
 {
-    width: 79.221%;
+    width: 80%;
     height: inherit;
     background-color: black;
     object-fit: none;
@@ -92,22 +92,22 @@ body
 
 .image-content-top .image-top
 {
-    object-position: 50% 35%;
+    object-position: 40% 21.5%;
 }
 
 .image-content-bottom .image-bottom
 {
-    object-position: 50% 75%;
+    object-position: right 100% bottom 40%;
 }
 
 .image-container:hover .image-content-top .image-top
 {
-    object-position: 0% 35%;
+    object-position: 20% 21.5%;
 }
 
 .image-container:hover .image-content-bottom .image-bottom
 {
-    object-position: 85% 75%;
+    object-position: right 20% bottom 40%;
 }
 
 .project-text
