@@ -9,6 +9,6 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap"> 
-
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
