@@ -268,6 +268,7 @@ body
 }
 
 .text-container {
+    margin-left: 64px;
     width: 59%;
     display: flex;
     flex-flow: column nowrap;
@@ -275,23 +276,15 @@ body
 }
 
 .name-container {
-    position: relative;
-    height: 293px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .name-container .name {
     font-size: 85px;
     font-weight: normal;
     line-height: 113px;
-}
-
-.name-container .lastname {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    transition: bottom 1s ease 0s;
 }
 
 /* .text-container:hover ~ .name-container .lastname {
@@ -326,4 +319,57 @@ body
 .buttons:hover {
     background: #383635;
     color: #F7F0E9;
+}
+
+/* MEDIA QUERRIES */
+
+@media (max-width: 768px) {
+    /* HOME PAGE */
+    .menu-container {
+        padding: 20px 26px;
+    }
+
+    .image-container {
+        margin: 32px auto;
+    }
+
+    .image-contents {
+        height: 180px;
+    }
+
+    .project-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 16px;
+    }
+
+    .choice-menu-objects {
+        width: 30px;
+    }
+
+    .choice-menu-objects:hover, .choice-menu-objects.selected {
+        width: 42px;
+    }
+
+    /* CONTACT PAGE */
+
+    .image-profile {
+        display: none;
+    }
+
+    .text-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .button-container {
+        margin-top: 32px;
+        height: auto;
+        justify-content: center;
+    }
+
+    .buttons {
+        margin-bottom: 16px;
+    }
 }
