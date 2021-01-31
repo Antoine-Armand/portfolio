@@ -1,7 +1,13 @@
 body 
 {
+    position: relative;
     height: 100vh;
     background-color: #f7f1e3;
+    overflow: hidden;
+}
+
+.display-none {
+    display: none !important;
 }
 
 /** Menu **/
@@ -23,6 +29,7 @@ body
 
 .menu-contents
 {
+    margin-left: 16px;
     font-size: 22px;
     line-height: 33px;
 }
@@ -31,6 +38,15 @@ body
 {
     text-decoration: underline;
     text-decoration-color: #383635;
+}
+
+
+.menu-contents.main {
+    margin: 0;
+}
+
+.menu-contents.main .logo {
+    display: none;
 }
 
 /** Main page **/
@@ -52,40 +68,47 @@ body
     font-weight: normal;
     font-size: 800px;
     line-height: 1066px;
-    color: rgba(184, 178, 173, 0.25);
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #B8B2AD;
     transform: rotate(-22deg);
     z-index: -1;
+}
+
+/* Images projects */
+
+.image-slider {
+    width: max-content;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.image-slide {
+    width: 100vw;
 }
 
 .image-container
 {
     position: relative;
     margin: 65px auto;
-    width: 80.209%;
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .image-contents
 {
+    margin-right: 96px;
     position: relative;
-    width: 100%;
-    height: 334px;
+    width: 50%;
+    height: 552px;
     display: flex;
-}
-
-.image-contents.image-content-top
-{
-    flex-flow: row nowrap;
-}
-
-.image-contents.image-content-bottom
-{
-    flex-flow: row-reverse nowrap;
 }
 
 .images
 {
-    width: 80%;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     background-color: black;
     object-fit: cover;
 }
@@ -96,7 +119,7 @@ body
     display: none;
     position: absolute;
     top: 0;
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -146,9 +169,7 @@ body
 
 .project-text
 {
-    position: absolute;
-    top: 386px;
-    left: -117px;
+    width: 40%;
     font-family: 'Poppins', sans-serif;
     cursor: default;
 }
@@ -164,6 +185,7 @@ body
 
 .project-text .project-title
 {
+    margin-bottom: 18px;
     font-style: normal;
     font-weight: bold;
     font-size: 44px;
@@ -173,13 +195,11 @@ body
     -webkit-text-stroke-color: #383635;
     transition: all 0.2s ease;
 }
-.image-container:hover .project-text .project-title
-{
-    color: #383635;
-}
 
 .project-text .project-title:hover {
     text-decoration: underline;
+    cursor: pointer;
+    color: #383635;
 }
 
 .project-text .project-description {
@@ -195,145 +215,58 @@ body
 
 .choice-menu
 {
-    position: fixed;
-    top: 264px;
-    right: 0px;
+    position: absolute;
+    bottom: 6%;
+    left: 142px;
+    right: 142px;
     font-family: 'Poppins', sans-serif;
 }
 
 .choice-menu ul
 {
     display: flex;
-    flex-flow: column nowrap;
-    align-items: end;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 
 .choice-menu-objects
 {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    width: 100px;
-    font-size: 32px;
-    line-height: 48px;
-    text-align: center;
-    color: #383635;
+    width: 243px;
+    height: 8px;
+    border-radius: 50px;
+    background-color: #B8B2AD;
+    box-sizing: border-box;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.choice-menu-objects::after
-{
-    content: "";
-    display: inline-block;
-    width: 75px;
-    height: 1px;
-    background-color: #383635;
-}
-
-.choice-menu-objects:hover,
 .choice-menu-objects.selected
 {
-    width: 130px;
-    font-size: 44px;
+    width: 234px;
+    background-color: #787471;
 }
 
-.choice-menu-objects:hover::after,
-.choice-menu-objects.selected::after
+.choice-menu-objects:hover
 {
-    width: 100px;
-}
-
-/*
-    CONTACT
-*/
-
-.contact-container {
-    margin: 0 auto;
-    margin-top: 65px;
-    width: 80.209%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    font-family: 'Playfair Display', serif;
-    color: #383635;
-}
-
-.image-profile {
-    width: 352px;
-    height: 523px;
-    object-fit: cover;
-}
-
-.text-container {
-    margin-left: 64px;
-    width: 59%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-}
-
-.name-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.name-container .name {
-    font-size: 85px;
-    font-weight: normal;
-    line-height: 113px;
-}
-
-/* .text-container:hover ~ .name-container .lastname {
-    bottom: 180px;
-} */
-
-.button-container {
-    height: 182px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-.buttons {
-    width: 307px;
-    height: 60px;
-    padding: 0px;
-    text-align: center;
-    border: 1px solid #383635;
-    box-sizing: border-box;
-    background: #F7F0E9;
-    font-size: 22px;
-    line-height: 58px;
-    font-family: Poppins;
-    color: #383635;
-    cursor: pointer;
-    transition: color 1s ease 0s;
-    transition: background 1s ease 0s;
-}
-
-.buttons:hover {
-    background: #383635;
-    color: #F7F0E9;
+    width: 361px;
+    background-color: transparent;
+    border: 1px solid #000000;
 }
 
 /* MEDIA QUERRIES */
 
 @media (max-width: 768px) {
-    /* HOME PAGE */
     .menu-container {
         padding: 20px 26px;
     }
 
     .image-container {
-        margin: 32px auto;
+        margin: 0px auto;
+        flex-flow: column nowrap;
     }
 
     .image-contents {
+        width: 100%;
         height: 180px;
     }
 
@@ -342,34 +275,34 @@ body
         top: auto;
         left: auto;
         margin-top: 16px;
-    }
-
-    .choice-menu-objects {
-        width: 30px;
-    }
-
-    .choice-menu-objects:hover, .choice-menu-objects.selected {
-        width: 42px;
-    }
-
-    /* CONTACT PAGE */
-
-    .image-profile {
-        display: none;
-    }
-
-    .text-container {
-        margin-left: 0;
         width: 100%;
     }
 
-    .button-container {
-        margin-top: 32px;
-        height: auto;
-        justify-content: center;
+    .project-text .project-title {
+        margin-bottom: 0px;
+        font-size: 32px;
+        line-height: 48px;
     }
 
-    .buttons {
-        margin-bottom: 16px;
+    .project-text .project-label {
+        font-size: 15px;
+    }
+
+    .choice-menu {
+        left: 72px;
+        right: 72px;
+    }
+
+    .choice-menu-objects,
+    .choice-menu-objects.selected {
+        width: 25%;
+    }
+
+    .menu-contents .text {
+        display: none;
+    }
+
+    .menu-contents.main .logo {
+        display: inline-block;
     }
 }

@@ -6,6 +6,7 @@ var tesst = document.querySelector(".choice-menu-container");
 var oui = tesst.querySelectorAll(".choice-menu-objects");
 var projectImageTop = document.querySelector(".image-top");
 var projectImageBot = document.querySelector(".image-bottom");
+var slides = document.querySelectorAll(".image-slide");
 
 // Get position of the page vertically
 var posX = window.scrollY;
@@ -23,7 +24,9 @@ oui[0].addEventListener('click', () =>
     oui[0].classList.add("selected");
     oui[1].classList.remove("selected");
     oui[2].classList.remove("selected");
-    window.scrollTo({top: 0, behavior: "smooth"});
+    slides[0].classList.remove("display-none");
+    slides[1].classList.add("display-none");
+    slides[2].classList.add("display-none");
 })
 
 oui[1].addEventListener('click', () => 
@@ -31,7 +34,9 @@ oui[1].addEventListener('click', () =>
     oui[1].classList.add("selected");
     oui[0].classList.remove("selected");
     oui[2].classList.remove("selected");
-    window.scrollTo({top: posItem2, behavior: "smooth"});
+    slides[0].classList.add("display-none");
+    slides[1].classList.remove("display-none");
+    slides[2].classList.add("display-none");
 })
 
 oui[2].addEventListener('click', () => 
@@ -39,9 +44,11 @@ oui[2].addEventListener('click', () =>
     oui[2].classList.add("selected");
     oui[0].classList.remove("selected");
     oui[1].classList.remove("selected");
-    window.scrollTo({top: posItem3, behavior: "smooth"});
+    slides[0].classList.add("display-none");
+    slides[1].classList.add("display-none");
+    slides[2].classList.remove("display-none");
 })
-
+/*
 document.addEventListener('scroll', () => {
     let variantPosX = window.scrollY;
     let viewPosX = variantPosX + 320;
@@ -62,3 +69,4 @@ document.addEventListener('scroll', () => {
         oui[1].classList.remove("selected");
     }
 })
+*/
